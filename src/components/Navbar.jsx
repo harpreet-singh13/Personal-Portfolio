@@ -87,7 +87,7 @@ const Navbar = () => {
 
             <li className="ml-4">
               <a
-                href="https://drive.google.com/file/d/1OWkVNbgsnv57Tr0axsKqedvKeoOWhT0H/view?usp=sharing"
+                href="https://drive.google.com/file/d/1i_5ffyt6-YdxcHnhtrBY7cLFkkxSbjre/view?usp=sharing"
                 className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-md hover:shadow-blue-500/20 transition-all duration-300 text-sm font-medium"
               >
                 Resume
@@ -127,7 +127,7 @@ const Navbar = () => {
               ))}
               <li>
                 <a
-                  href="https://drive.google.com/file/d/1OWkVNbgsnv57Tr0axsKqedvKeoOWhT0H/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1i_5ffyt6-YdxcHnhtrBY7cLFkkxSbjre/view?usp=sharing"
                   className="block w-full text-center py-2 px-5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-md hover:shadow-blue-500/20 transition-all duration-300 text-sm font-medium mt-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
