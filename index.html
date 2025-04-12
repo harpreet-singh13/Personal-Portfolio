@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio website of Harpreet Singh, a Full Stack Developer who creates robust and user-friendly web applications with modern technologies."
+    />
+    <meta
+      name="keywords"
+      content="web developer, portfolio, full stack, react, tailwind, javascript, node.js"
+    />
+    <meta name="author" content="Harpreet Singh" />
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Import Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Harpreet Singh | Full Stack Developer" />
+    <meta
+      property="og:description"
+      content="Portfolio website showcasing Harpreet Singh's projects and skills as a Full Stack Developer."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://harpreet-singh.dev" />
+
+    <title>Harpreet Singh | Full Stack Developer</title>
+
+    <style>
+      /* Loading Animation */
+      .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #111827;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease-out;
+      }
+      .preloader.fade-out {
+        opacity: 0;
+      }
+      .loader {
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        border-top-color: #3b82f6;
+        animation: spin 1s ease-in-out infinite;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loading Animation -->
+    <div class="preloader" id="preloader">
+      <div class="loader"></div>
+    </div>
+
+    <div id="root"></div>
+
+    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Preloader Script -->
+    <script>
+      window.addEventListener("load", function () {
+        const preloader = document.getElementById("preloader");
+        preloader.classList.add("fade-out");
+        setTimeout(() => {
+          preloader.style.display = "none";
+        }, 500);
+      });
+    </script>
+  </body>
+</html>
