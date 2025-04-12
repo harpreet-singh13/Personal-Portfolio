@@ -15,9 +15,10 @@ const Project = () => {
     {
       id: 2,
       title: "Netflix GPT",
-      description: "AI Movie Recommender",
+      description:
+        "AI-powered movie recommender with a responsive Tailwind UI, Firebase Auth, TMDB API, and Redux. Integrated OpenAI for personalized suggestions.",
       image: "src/images/netflixGPT.png",
-      tags: ["React.js", "Express", "PostgreSQL"],
+      tags: ["React.js", "Redux", "Tailwind CSS", "Firebase"],
       demoLink: "#",
       githubLink: "https://github.com/harpreet-singh13/Netflix-GPT",
     },
@@ -25,9 +26,9 @@ const Project = () => {
       id: 3,
       title: "YouTube UI",
       description:
-        "A beautiful weather application with location tracking, forecasts, and interactive maps.",
+        "Integrated YouTube API for real-time video data with debounced search and caching for performance, comments and a live chat feature.",
       image: "src/images/youtubeUI.png",
-      tags: ["React", "Node.js", "WeatherAPI", "Leaflet"],
+      tags: ["React", "Redux", "API", "Caching"],
       demoLink: "https://utubeui.netlify.app/",
       githubLink: "https://github.com/harpreet-singh13/Youtube-UI",
     },
