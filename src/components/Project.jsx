@@ -1,4 +1,7 @@
 import React from "react";
+import devlinkImg from "../images/devlink.png";
+import netflixGPTImg from "../images/netflixGPT.png";
+import youtubeUIImg from "../images/youtubeUI.png";
 
 const Project = () => {
   const projects = [
@@ -7,7 +10,7 @@ const Project = () => {
       title: "Devlink",
       description:
         "A platform that helps people discover each other, collaborate, chat in real-time and user authentication.",
-      image: "src/images/devlink.png",
+      image: devlinkImg,
       tags: ["React", "Node.js", "MongoDB", "Socket.io", "AWS"],
       demoLink: "https://devlink.click",
       githubLink: "https://github.com/harpreet-singh13/devTinder-web",
@@ -17,7 +20,7 @@ const Project = () => {
       title: "Netflix GPT",
       description:
         "AI-powered movie recommender with a responsive Tailwind UI, Firebase Auth, TMDB API, and Redux. Integrated OpenAI for personalized suggestions.",
-      image: "src/images/netflixGPT.png",
+      image: netflixGPTImg,
       tags: ["React.js", "Redux", "Tailwind CSS", "Firebase"],
       demoLink: "#",
       githubLink: "https://github.com/harpreet-singh13/Netflix-GPT",
@@ -27,7 +30,7 @@ const Project = () => {
       title: "YouTube UI",
       description:
         "Integrated YouTube API for real-time video data with debounced search and caching for performance, comments and a live chat feature.",
-      image: "src/images/youtubeUI.png",
+      image: youtubeUIImg,
       tags: ["React", "Redux", "API", "Caching"],
       demoLink: "https://utubeui.netlify.app/",
       githubLink: "https://github.com/harpreet-singh13/Youtube-UI",
