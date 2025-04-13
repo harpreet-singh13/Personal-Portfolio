@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen relative overflow-hidden flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white"
+      className="min-h-screen relative overflow-hidden flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white pt-20" // Added pt-20 for padding-top
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -20,7 +20,7 @@ const Hero = () => {
               Full Stack Developer
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in">
-              Hi, I'm <span className="text-gradient">Harpreet Singh</span>
+              Hi, I'm <span className="text-gradient">Harpreet</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in opacity-0 animation-delay-300">
               A passionate developer creating robust and user-friendly web

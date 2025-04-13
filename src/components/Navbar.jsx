@@ -46,7 +46,7 @@ const Navbar = () => {
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled
           ? "py-3 bg-gray-900/95 backdrop-blur-sm shadow-lg"
-          : "py-5 bg-transparent"
+          : "py-5 bg-gray-900/95" // Changed from transparent to maintain visibility
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
