@@ -5,28 +5,28 @@ const Skills = () => {
 
   const skillsData = {
     frontend: [
-      { name: "HTML5 & CSS3", proficiency: 90 },
+      { name: "React Native", proficiency: 90 },
+      { name: "React JS", proficiency: 88 },
       { name: "JavaScript", proficiency: 85 },
-      { name: "React", proficiency: 88 },
       { name: "TypeScript", proficiency: 80 },
       { name: "Tailwind CSS", proficiency: 85 },
       { name: "Redux", proficiency: 82 },
     ],
     backend: [
-      { name: "Node.js", proficiency: 84 },
-      { name: "Express.js", proficiency: 86 },
+      { name: "Python", proficiency: 84 },
+      { name: "Django", proficiency: 86 },
       { name: "MongoDB", proficiency: 83 },
       { name: "PostgreSQL", proficiency: 80 },
       { name: "RESTful APIs", proficiency: 87 },
       { name: "GraphQL", proficiency: 75 },
     ],
     devops: [
+      { name: "Google Play Console", proficiency: 81 },
+      { name: "Firebase", proficiency: 79 },
+      { name: "CI/CD", proficiency: 79 },
       { name: "Git", proficiency: 88 },
       { name: "Docker", proficiency: 77 },
-      { name: "AWS", proficiency: 75 },
-      { name: "CI/CD", proficiency: 79 },
-      { name: "Jest", proficiency: 81 },
-      { name: "Webpack", proficiency: 76 },
+      { name: "Android Studio", proficiency: 75 },
     ],
   };
 
@@ -89,9 +89,9 @@ const Skills = () => {
                   <h4 className="text-lg font-medium text-gray-800">
                     {skill.name}
                   </h4>
-                  <span className="text-blue-600 font-semibold">
+                  {/* <span className="text-blue-600 font-semibold">
                     {skill.proficiency}%
-                  </span>
+                  </span> */}
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2.5">
                   <div

@@ -1,5 +1,5 @@
 import React from "react";
-import harpreet from "../images/harpreet.jpg";
+import ranjeet from "../images/ranjeet.jpeg";
 const Hero = () => {
   return (
     <section
@@ -17,14 +17,14 @@ const Hero = () => {
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="md:w-3/5 text-center md:text-left">
             <p className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-sm font-medium rounded-full mb-6 animate-fade-in">
-              Full Stack Developer
+              Mobile App Developer
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in">
-              Hi, I'm <span className="text-gradient">Harpreet</span>
+              Hi, I'm <span className="text-gradient">Ranjeet</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in opacity-0 animation-delay-300">
-              A passionate developer creating robust and user-friendly web
-              applications with modern technologies.
+              A passionate developer building robust and user-friendly mobile
+              applications using modern technologies with React Native.
             </p>
             <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-4 animate-fade-in opacity-0 animation-delay-600">
               <a
@@ -61,7 +61,7 @@ const Hero = () => {
               <div className="flex flex-wrap gap-6 animate-fade-in opacity-0 animation-delay-900">
                 <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center group">
                   <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg"
                     alt="React"
                     className="w-6 h-6 group-hover:scale-110 transition-transform duration-300"
                   />
@@ -75,7 +75,7 @@ const Hero = () => {
                 </div>
                 <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center group">
                   <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
                     alt="Node.js"
                     className="w-6 h-6 group-hover:scale-110 transition-transform duration-300"
                   />
@@ -97,8 +97,8 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full blur-3xl opacity-20 animate-pulse"></div>
               <div className="relative w-64 h-64 mx-auto overflow-hidden rounded-full border-4 border-white/20 shadow-2xl">
                 <img
-                  src={harpreet}
-                  alt="Harpreet Singh"
+                  src={ranjeet}
+                  alt="Ranjeet Singh"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -107,7 +107,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll indicator */}
       {/* Scroll indicator */}
       <div className="absolute bottom-8 w-full flex justify-center animate-bounce">
         <a

@@ -5,24 +5,24 @@ const About = () => {
   const experiences = [
     {
       year: "Jan 2024 - Present",
-      role: "Solution Developer",
-      company: "Tata Technologies",
+      role: "Software Developer",
+      company: "Shaurya TS",
       description:
-        "Leading development of scalable web applications using React, Node.js, and cloud technologies.",
+        "Designed and developed cross-platform mobile applications using React Native with a Django backend.",
     },
     {
-      year: "Jan 2023 - Jan 2024",
-      role: "Graduate Trainee",
-      company: "Tata Technologies",
-      description:
-        "Built and maintained client project focusing on responsive design and backend optimization.",
-    },
-    {
-      year: "Jan 2022 - April 2022",
+      year: "Sept 2023 - Dec 2023",
       role: "Intern",
-      company: "HighRadius",
+      company: "Shaurya TS",
       description:
-        "Specialized in creating interactive UI/UX experiences with modern JavaScript frameworks.",
+        "Specialized in designing interactive, user-friendly React Native mobile UI/UX for seamless, high-performance cross-platform apps.",
+    },
+    {
+      year: "Mar 2022 - Sep 2023",
+      role: "Freelancer",
+      company: "Self-Employed",
+      description:
+        "Provided end-to-end React Native development services for clients, focusing on building intuitive, high-performance cross-platform mobile apps.",
     },
   ];
 
@@ -77,17 +77,21 @@ const About = () => {
           {/* About Text Content */}
           <div className="w-full md:w-3/5 lg:w-2/3 space-y-4 text-gray-700">
             <p className="text-lg">
-              Hello! I'm a Full Stack Developer with a passion for creating
-              elegant, efficient, and user-friendly web applications. With
-              expertise in both front-end and back-end development, I bridge the
-              gap between design and functionality.
+              Experienced Full Stack Developer skilled in React, Django, with
+              proven impact (20,000 app downloads, 90% positive reviews), eager
+              to advance backend expertise. Proficient in JavaScript frameworks,
+              RESTful APIs, and state management. Committed to clean code, CI/CD
+              practices, and responsive UIs for enhanced user engagement. Eager
+              to leverage extensive frontend knowledge and further develop
+              backend skills in a challenging role
             </p>
             <p className="text-lg">
-              I specialize in building complete web applications using modern
-              technologies and best practices. Whether it's crafting responsive
-              interfaces with React, building robust APIs with Node.js, or
-              optimizing database performance, I enjoy tackling challenges
-              across the entire stack.
+              Proficient in optimizing frontend performance through techniques
+              such as code splitting, lazy loading, and reusable component
+              libraries, which have significantly reduced development time and
+              improved user experience. Experienced in implementing CI/CD
+              practices and real-time error monitoring using tools like Sentry
+              to accelerate bug identification and resolution.
             </p>
             <p className="text-lg">
               When I'm not coding, you can find me exploring new technologies,
@@ -116,25 +120,28 @@ const About = () => {
               </h3>
               <div className="flex flex-wrap gap-2 mt-3">
                 <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
-                  JavaScript
+                  React Native (iOS/Android)
                 </span>
                 <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
                   React
                 </span>
                 <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
-                  Node.js
+                  JavaScript
                 </span>
                 <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
-                  Express
+                  Android Studio
                 </span>
                 <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
-                  MongoDB
+                  Python
                 </span>
                 <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
-                  SQL
+                  Django
                 </span>
                 <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
-                  AWS
+                  Redux
+                </span>
+                <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
+                  Firebase
                 </span>
                 <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
                   Docker
