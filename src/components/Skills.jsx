@@ -89,9 +89,9 @@ const Skills = () => {
                   <h4 className="text-lg font-medium text-gray-800">
                     {skill.name}
                   </h4>
-                  <span className="text-blue-600 font-semibold">
+                  {/* <span className="text-blue-600 font-semibold">
                     {skill.proficiency}%
-                  </span>
+                  </span> */}
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2.5">
                   <div

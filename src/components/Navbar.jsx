@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -51,8 +52,8 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <nav className="flex justify-between items-center relative">
-          <a
-            href="#"
+          <Link
+            to="/"
             className="text-xl md:text-2xl font-bold relative z-10 group"
           >
             <span className="inline-block transform-gpu transition-transform duration-300 group-hover:scale-110 text-blue-400">
@@ -62,7 +63,7 @@ const Navbar = () => {
               </span>
             </span>
             <div className="absolute inset-0 bg-blue-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-70 transition-opacity duration-300 -z-10"></div>
-          </a>
+          </Link>
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex space-x-1 lg:space-x-2">
@@ -87,7 +88,7 @@ const Navbar = () => {
 
             <li className="ml-4">
               <a
-                href="https://drive.google.com/file/d/1i_5ffyt6-YdxcHnhtrBY7cLFkkxSbjre/view?usp=sharing"
+                href="https://drive.google.com/file/d/1i_5ffyt6-YdxcHnhtrBY7cLFkkxSbjre/view"
                 className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-md hover:shadow-blue-500/20 transition-all duration-300 text-sm font-medium"
               >
                 Resume
@@ -127,7 +128,7 @@ const Navbar = () => {
               ))}
               <li>
                 <a
-                  href="https://drive.google.com/file/d/1i_5ffyt6-YdxcHnhtrBY7cLFkkxSbjre/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1i_5ffyt6-YdxcHnhtrBY7cLFkkxSbjre/view"
                   className="block w-full text-center py-2 px-5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-md hover:shadow-blue-500/20 transition-all duration-300 text-sm font-medium mt-2"
                   onClick={() => setIsMenuOpen(false)}
                 >

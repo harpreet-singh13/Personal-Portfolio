@@ -108,7 +108,6 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      {/* Scroll indicator */}
       <div className="absolute bottom-8 w-full flex justify-center animate-bounce">
         <a
           href="#about"

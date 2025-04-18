@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import devlinkImg from "../images/devlink.png";
-import netflixGPTImg from "../images/netflixGPT.png";
 import youtubeUIImg from "../images/youtubeUI.png";
+import netflixGPTImg from "../images/netflixGPT.png";
 
 const Project = () => {
   const projects = [
@@ -11,7 +12,7 @@ const Project = () => {
       description:
         "A platform that helps people discover each other, collaborate, chat in real-time and user authentication.",
       image: devlinkImg,
-      tags: ["React", "Node.js", "MongoDB", "Socket.io", "AWS"],
+      tags: ["React", "Node.js", "MongoDB", "Socket.io"],
       demoLink: "https://devlink.click",
       githubLink: "https://github.com/harpreet-singh13/devTinder-web",
     },
@@ -27,7 +28,7 @@ const Project = () => {
     },
     {
       id: 3,
-      title: "YouTube UI",
+      title: "Media Streaming Platform (YouTube-like Application)",
       description:
         "Integrated YouTube API for real-time video data with debounced search and caching for performance, comments and a live chat feature.",
       image: youtubeUIImg,
@@ -50,9 +51,10 @@ const Project = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <div
+            <Link
+              to={`/project/${project.id}`}
               key={project.id}
-              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
             >
               <div className="relative overflow-hidden group">
                 <img
@@ -68,17 +70,21 @@ const Project = () => {
                         className="text-white bg-blue-600 hover:bg-blue-700 px-3 py-1.5 rounded-md text-sm font-medium transition-colors duration-300"
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
                       >
                         Live Demo
                       </a>
-                      <a
-                        href={project.githubLink}
-                        className="text-white bg-gray-800 hover:bg-gray-900 px-3 py-1.5 rounded-md text-sm font-medium transition-colors duration-300"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        GitHub
-                      </a>
+                      {project.githubLink && (
+                        <a
+                          href={project.githubLink}
+                          className="text-white bg-gray-800 hover:bg-gray-900 px-3 py-1.5 rounded-md text-sm font-medium transition-colors duration-300"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          GitHub
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -100,11 +106,11 @@ const Project = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <a
             href="#"
             className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 shadow-md hover:shadow-lg"
@@ -123,7 +129,7 @@ const Project = () => {
               />
             </svg>
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );
