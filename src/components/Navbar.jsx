@@ -8,28 +8,19 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-
-      const sections = ["home", "about", "projects", "skills", "contact"];
+      setScrolled(window.scrollY > 50);
+      const sections = ["home", "about", "projects", "skills", "certifications", "contact"];
       for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          const topVisible = rect.top <= 100;
-          const bottomVisible = rect.bottom > 100;
-
-          if (topVisible && bottomVisible) {
+        const el = document.getElementById(section);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom > 100) {
             setActiveSection(section);
             break;
           }
         }
       }
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -38,7 +29,8 @@ const Navbar = () => {
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
     { href: "#projects", label: "Projects" },
-    { href: "#skills", label: "Skills" },
+    { href: "#skills", label: "AI Stack" },
+    { href: "#certifications", label: "Certs" },
     { href: "#contact", label: "Contact" },
   ];
 
@@ -46,79 +38,77 @@ const Navbar = () => {
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "py-3 bg-gray-900/95 backdrop-blur-sm shadow-lg"
-          : "py-5 bg-gray-900/95" // Changed from transparent to maintain visibility
+          ? "py-3 bg-[#070B14]/90 backdrop-blur-md border-b border-[#1E2D45]"
+          : "py-5 bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
         <nav className="flex justify-between items-center relative">
-          <Link
-            to="/"
-            className="text-xl md:text-2xl font-bold relative z-10 group"
-          >
-            <span className="inline-block transform-gpu transition-transform duration-300 group-hover:scale-110 text-blue-400">
-              Dev
-              <span className="text-gradient bg-gradient-to-r from-blue-400 to-indigo-400">
-                Portfolio
-              </span>
-            </span>
-            <div className="absolute inset-0 bg-blue-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-70 transition-opacity duration-300 -z-10"></div>
+          <Link to="/" className="text-xl md:text-2xl font-bold relative z-10 group font-display">
+            <span className="text-gradient-ai">HS</span>
+            <span className="text-slate-400 font-light text-sm ml-2 hidden sm:inline">/ AI Generalist</span>
           </Link>
 
-          {/* Desktop Menu */}
-          <ul className="hidden md:flex space-x-1 lg:space-x-2">
+          {/* Desktop */}
+          <ul className="hidden md:flex space-x-1 items-center">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className={`px-4 py-2 rounded-lg transition-all duration-300 relative group ${
+                  className={`px-4 py-2 rounded-lg text-sm transition-all duration-300 relative group ${
                     activeSection === link.href.substring(1)
                       ? "text-white font-medium"
-                      : "text-gray-300 hover:text-white"
+                      : "text-slate-400 hover:text-white"
                   }`}
                 >
                   {link.label}
                   {activeSection === link.href.substring(1) && (
-                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-400 rounded"></span>
+                    <span className="absolute bottom-0 left-2 right-2 h-0.5 bg-gradient-to-r from-[#00A1E0] to-[#6366F1] rounded-full"></span>
                   )}
-                  <span className="absolute inset-0 bg-blue-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                 </a>
               </li>
             ))}
-
-            <li className="ml-4">
+            <li className="ml-3">
               <a
                 href="https://drive.google.com/file/d/1i_5ffyt6-YdxcHnhtrBY7cLFkkxSbjre/view"
-                className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-md hover:shadow-blue-500/20 transition-all duration-300 text-sm font-medium"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-2 bg-[#00A1E0] hover:bg-[#0090C8] text-white rounded-lg text-sm font-medium transition-all duration-300 shadow-lg hover:shadow-[#00A1E0]/30"
               >
                 Resume
               </a>
             </li>
           </ul>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile button */}
           <button
-            className="md:hidden text-2xl focus:outline-none z-50 text-white"
+            className="md:hidden text-slate-300 z-50 focus:outline-none"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
           >
-            {isMenuOpen ? "✕" : "☰"}
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {isMenuOpen
+                ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              }
+            </svg>
           </button>
 
-          {/* Mobile Menu */}
+          {/* Mobile menu */}
           <div
-            className={`md:hidden absolute top-full left-0 w-full bg-gray-900/95 backdrop-blur-sm shadow-lg transition-all duration-300 overflow-hidden ${
+            className={`md:hidden absolute top-full left-0 w-full bg-[#070B14]/98 backdrop-blur-md border-b border-[#1E2D45] transition-all duration-300 overflow-hidden ${
               isMenuOpen ? "max-h-96 py-4" : "max-h-0 py-0"
             }`}
           >
-            <ul className="flex flex-col space-y-4 px-4">
+            <ul className="flex flex-col space-y-1 px-4">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className={`block py-2 transition-colors duration-300 ${
+                    className={`block py-2.5 px-3 rounded-lg text-sm transition-colors duration-300 ${
                       activeSection === link.href.substring(1)
-                        ? "text-blue-400 font-medium"
-                        : "text-gray-300 hover:text-blue-400"
+                        ? "text-[#00A1E0] font-medium bg-[#00A1E0]/10"
+                        : "text-slate-400 hover:text-white hover:bg-white/5"
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -126,10 +116,12 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
-              <li>
+              <li className="pt-2">
                 <a
                   href="https://drive.google.com/file/d/1i_5ffyt6-YdxcHnhtrBY7cLFkkxSbjre/view"
-                  className="block w-full text-center py-2 px-5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-md hover:shadow-blue-500/20 transition-all duration-300 text-sm font-medium mt-2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center py-2.5 px-5 bg-[#00A1E0] hover:bg-[#0090C8] text-white rounded-lg text-sm font-medium transition-all duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Resume

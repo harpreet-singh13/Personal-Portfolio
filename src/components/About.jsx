@@ -1,153 +1,150 @@
 import React from "react";
+import useScrollReveal from "../hooks/useScrollReveal";
+
+const experiences = [
+  {
+    year: "Feb 2026 – Present",
+    role: "Senior Software Engineer",
+    company: "Bounteous",
+    description: "Building intelligent AI agents on Salesforce Agentforce and developing full-stack enterprise applications using React and Node.js.",
+    current: true,
+  },
+  {
+    year: "Jan 2024 – Jan 2026",
+    role: "Solution Developer",
+    company: "Tata Technologies",
+    description: "Led development of scalable web applications using React, Node.js, and cloud technologies for automotive clients.",
+    current: false,
+  },
+  {
+    year: "Jan 2023 – Jan 2024",
+    role: "Graduate Trainee",
+    company: "Tata Technologies",
+    description: "Built and maintained client projects focusing on responsive design and backend optimization.",
+    current: false,
+  },
+  {
+    year: "Jan 2022 – Apr 2022",
+    role: "Software Intern",
+    company: "HighRadius",
+    description: "Created interactive UI/UX experiences with modern JavaScript frameworks for fintech products.",
+    current: false,
+  },
+];
+
+const highlights = [
+  { label: "Yrs Experience", value: "3+" },
+  { label: "Certifications", value: "5" },
+  { label: "Projects", value: "10+" },
+];
+
+const skills = [
+  { label: "Salesforce Agentforce", color: "text-[#00A1E0] border-[#00A1E0]/25 bg-[#00A1E0]/8" },
+  { label: "Einstein AI",           color: "text-[#00A1E0] border-[#00A1E0]/25 bg-[#00A1E0]/8" },
+  { label: "React",                 color: "text-[#22D3EE] border-[#22D3EE]/25 bg-[#22D3EE]/8" },
+  { label: "Node.js",               color: "text-emerald-400 border-emerald-400/25 bg-emerald-400/8" },
+  { label: "JavaScript",            color: "text-yellow-400 border-yellow-400/25 bg-yellow-400/8" },
+  { label: "Apex",                  color: "text-[#00A1E0] border-[#00A1E0]/25 bg-[#00A1E0]/8" },
+  { label: "LWC",                   color: "text-[#6366F1] border-[#6366F1]/25 bg-[#6366F1]/8" },
+  { label: "REST APIs",             color: "text-slate-300 border-slate-600 bg-slate-700/30" },
+  { label: "MongoDB",               color: "text-emerald-400 border-emerald-400/25 bg-emerald-400/8" },
+  { label: "Prompt Engineering",    color: "text-[#6366F1] border-[#6366F1]/25 bg-[#6366F1]/8" },
+];
 
 const About = () => {
-  // Data for the experience timeline
-  const experiences = [
-    {
-      year: "Jan 2024 - Present",
-      role: "Solution Developer",
-      company: "Tata Technologies",
-      description:
-        "Leading development of scalable web applications using React, Node.js, and cloud technologies.",
-    },
-    {
-      year: "Jan 2023 - Jan 2024",
-      role: "Graduate Trainee",
-      company: "Tata Technologies",
-      description:
-        "Built and maintained client project focusing on responsive design and backend optimization.",
-    },
-    {
-      year: "Jan 2022 - April 2022",
-      role: "Intern",
-      company: "HighRadius",
-      description:
-        "Specialized in creating interactive UI/UX experiences with modern JavaScript frameworks.",
-    },
-  ];
+  const sectionRef = useScrollReveal();
 
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <section ref={sectionRef} id="about" className="py-14 md:py-20 bg-[#070B14]">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
-          About Me
-        </h2>
-        <div className="flex flex-col md:flex-row gap-10 items-start max-w-5xl mx-auto">
-          {/* Career Timeline Section */}
-          <div className="w-full md:w-2/5 lg:w-1/3">
-            <div className="bg-white rounded-xl shadow-lg p-6">
-              <h3 className="text-xl font-bold text-gray-800 mb-6 flex items-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 mr-2 text-blue-500"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
+
+        {/* Header */}
+        <div className="text-center mb-10 md:mb-14 reveal-item">
+          <p className="text-[#00A1E0] text-xs sm:text-sm font-mono uppercase tracking-widest mb-3">Who I Am</p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white font-display mb-4">
+            About <span className="text-gradient-ai">Me</span>
+          </h2>
+          <div className="flex justify-center">
+            <span className="section-line"></span>
+          </div>
+        </div>
+
+        <div className="max-w-5xl mx-auto grid md:grid-cols-5 gap-8 md:gap-10 items-start">
+
+          {/* Bio + stats */}
+          <div className="md:col-span-3 space-y-4 reveal-item reveal-delay-1">
+            <p className="text-slate-300 leading-relaxed text-sm sm:text-base">
+              I'm an <span className="text-white font-medium">AI Generalist</span> and{" "}
+              <span className="text-[#00A1E0] font-medium">Salesforce Agentforce Specialist</span> currently building
+              intelligent enterprise solutions at <span className="text-white font-medium">Bounteous</span>. My work sits
+              at the intersection of AI, the Salesforce platform, and modern web development.
+            </p>
+            <p className="text-slate-400 leading-relaxed text-sm">
+              I specialise in designing and deploying autonomous AI agents using Salesforce Agentforce and Einstein AI,
+              alongside crafting full-stack web applications with React and Node.js. I'm passionate about making AI
+              practical — turning cutting-edge models into reliable, production-grade products.
+            </p>
+            <p className="text-slate-400 leading-relaxed text-sm">
+              Outside of work, I stay current through Trailhead, Anthropic's developer resources, and hands-on
+              experimentation with emerging AI frameworks.
+            </p>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-2 sm:gap-4 pt-2">
+              {highlights.map((h) => (
+                <div key={h.label} className="bento-card text-center py-3 sm:py-4">
+                  <p className="text-xl sm:text-2xl font-bold text-gradient-ai font-display">{h.value}</p>
+                  <p className="text-slate-500 text-[10px] sm:text-xs mt-1 leading-tight">{h.label}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Skill tags */}
+            <div className="pt-1">
+              <p className="text-slate-500 text-xs uppercase tracking-widest mb-3 font-mono">Key Technologies</p>
+              <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                {skills.map((tag) => (
+                  <span key={tag.label} className={`skill-pill ${tag.color}`}>{tag.label}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Timeline */}
+          <div className="md:col-span-2 reveal-item reveal-delay-2">
+            <div className="bento-card">
+              <div className="flex items-center gap-2 mb-5">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-[#00A1E0] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                Experience
-              </h3>
-              <div className="space-y-6">
-                {experiences.map((exp, index) => (
-                  <div
-                    key={index}
-                    className="relative pl-8 pb-5 border-l-2 border-blue-200 last:border-l-0 last:pb-0"
-                  >
-                    <div className="absolute left-[-8px] top-0 w-4 h-4 bg-blue-500 rounded-full" />
-                    <span className="block text-sm text-blue-600 font-medium mb-1">
-                      {exp.year}
-                    </span>
-                    <h4 className="font-bold text-gray-800">{exp.role}</h4>
-                    <p className="text-gray-600 text-sm">{exp.company}</p>
-                    <p className="mt-2 text-sm text-gray-500">
-                      {exp.description}
-                    </p>
+                <h3 className="text-white font-semibold font-display">Experience</h3>
+              </div>
+
+              <div className="space-y-4">
+                {experiences.map((exp, i) => (
+                  <div key={i} className="relative pl-6 pb-4 border-l border-[#1E2D45] last:border-l-0 last:pb-0">
+                    <div className={`absolute left-[-5px] top-0 w-2.5 h-2.5 rounded-full border-2 flex-shrink-0 ${
+                      exp.current
+                        ? "bg-[#00A1E0] border-[#00A1E0] shadow-[0_0_8px_rgba(0,161,224,0.6)]"
+                        : "bg-[#1E2D45] border-[#243550]"
+                    }`} />
+                    <div className="flex items-center gap-2 mb-0.5 flex-wrap">
+                      <span className="text-xs text-[#00A1E0] font-mono">{exp.year}</span>
+                      {exp.current && (
+                        <span className="text-[10px] bg-[#00A1E0]/15 text-[#00A1E0] border border-[#00A1E0]/25 px-1.5 py-0.5 rounded-full">
+                          Current
+                        </span>
+                      )}
+                    </div>
+                    <h4 className="text-white font-semibold text-sm">{exp.role}</h4>
+                    <p className="text-slate-500 text-xs mb-1">{exp.company}</p>
+                    <p className="text-slate-400 text-xs leading-relaxed">{exp.description}</p>
                   </div>
                 ))}
               </div>
             </div>
           </div>
 
-          {/* About Text Content */}
-          <div className="w-full md:w-3/5 lg:w-2/3 space-y-4 text-gray-700">
-            <p className="text-lg">
-              Hello! I'm a Full Stack Developer with a passion for creating
-              elegant, efficient, and user-friendly web applications. With
-              expertise in both front-end and back-end development, I bridge the
-              gap between design and functionality.
-            </p>
-            <p className="text-lg">
-              I specialize in building complete web applications using modern
-              technologies and best practices. Whether it's crafting responsive
-              interfaces with React, building robust APIs with Node.js, or
-              optimizing database performance, I enjoy tackling challenges
-              across the entire stack.
-            </p>
-            <p className="text-lg">
-              When I'm not coding, you can find me exploring new technologies,
-              contributing to open-source projects, or sharing my knowledge
-              through technical writing.
-            </p>
-
-            {/* Skills Tags */}
-            <div className="pt-6">
-              <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 mr-2 text-blue-500"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-                  />
-                </svg>
-                Technical Skills
-              </h3>
-              <div className="flex flex-wrap gap-2 mt-3">
-                <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
-                  JavaScript
-                </span>
-                <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
-                  React
-                </span>
-                <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
-                  Node.js
-                </span>
-                <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
-                  Express
-                </span>
-                <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
-                  MongoDB
-                </span>
-                <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
-                  SQL
-                </span>
-                <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
-                  AWS
-                </span>
-                <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
-                  Docker
-                </span>
-                <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
-                  Git
-                </span>
-                <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
-                  CI/CD
-                </span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
